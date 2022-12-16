@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$mobile: 375px;
+$desktop: 1024px;
+$DarkCyan: hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+$VeryDarkBlue: hsl(212, 21%, 14%);
+$DarkGrayishBlue: hsl(228, 12%, 48%);
+$White: hsl(0, 0%, 100%);
+$Paragraph: 14px;
+$Spacing: 1rem;
+$Font: "Montserrat";
+$ProductFont: "Fraunces";
+$Round: 8px;
+
+body {
+    background-color: $Cream;
+    padding: $Spacing;
+
+    img {
+        width: 100%;
+        border-top-left-radius: $Round;
+        border-top-right-radius: $Round;
+    }
+    
+    .product{
+        padding: $Spacing * 2;
+        display: grid;
+        gap: $Spacing;
+        background-color: $White;
+        border-bottom-left-radius: $Round;
+        border-bottom-right-radius: $Round;
+        .preview {
+            color: $DarkGrayishBlue;
+            font-family: $Font;
+            font-weight: 500;
+            letter-spacing: $Spacing - 0.5rem;
+        }
+
+        h1 {
+            font-family: $ProductFont;
+        }
+
+        p {
+            font-family: $Font;
+            line-height: 1.30;
+            font-weight: 500;
+            color: $DarkGrayishBlue;
+        }
+
+        .product__price {
+            display: flex;
+            align-items: center;
+            .product__discount {
+                color: $DarkCyan;
+                font-size: 2rem;
+                margin-right: $Spacing;
+                font-family: $ProductFont;
+            }
+            .product__original {
+                text-decoration: line-through;
+            }
+        }
+
+        button {
+            padding: 1rem;
+            border: none;
+            border-radius: $Round;
+            font-family: $Font;
+            font-weight: 700;
+            color: $White;
+            background-color: $DarkCyan;
+        }
+    }
+    
+    @media (min-width: $desktop) {
+        display: flex;
+        padding: $Spacing * 5;
+        
+        img {
+            width: 50%;
+            border-radius: 0;
+            border-top-left-radius: $Round;
+            border-bottom-left-radius: $Round;
+        }
+
+        .product {
+            width: 50%;
+            border-radius: 0;
+            border-top-right-radius: $Round;
+            border-bottom-right-radius: $Round;
+        }
+    }
+
+
+}
+
+
+
